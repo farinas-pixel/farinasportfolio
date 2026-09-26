@@ -1,11 +1,15 @@
-<div align="center">
+# FARINAS MUMTAJ H — 3D Interactive Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Personal portfolio for Farinas Mumtaj H — AI Creative Designer, ECE student, UI/UX and creative technology builder.
 
-  <h1>Built with AI Studio</h2>
+## Stack
+React + TypeScript, Vite, Tailwind CSS, Express, Google Gemini API, 3D CSS interactions.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Local development
+npm install
+Create .env.local from .env.example and set GEMINI_API_KEY, then run npm run dev.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Production
+This app uses Express for /api/chat, so deploy it to a Node-compatible service such as Cloud Run rather than GitHub Pages. The repository includes a Dockerfile.
 
-</div>
+Never commit a real API key.
