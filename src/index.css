@@ -55,3 +55,13 @@
 .emphasis-row span{font:9px 'JetBrains Mono';letter-spacing:.13em;color:#7d8490;border:1px solid var(--line);padding:9px 11px;border-radius:999px}
 @media(max-width:900px){.certificate-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.certificate-grid{grid-template-columns:1fr}.certificate-face{height:225px}.emphasis{min-height:55vh}.emphasis-row{gap:8px}}
+
+.what-i-do{border-top:1px solid var(--line)}
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.what-card{min-height:220px;position:relative;padding:22px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#12151c,#0b0d11);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden}
+.what-card:hover{transform:translateY(-8px) rotateX(4deg) rotateY(-3deg);border-color:rgba(79,124,255,.4);box-shadow:0 28px 60px rgba(0,0,0,.3)}
+.what-card>span{font:8px 'JetBrains Mono';color:#626b7c}
+.what-card strong{display:block;margin-top:45px;font:600 24px/1 'Space Grotesk';letter-spacing:-.045em}
+.what-card p{color:#858b97;font-size:11px;line-height:1.6;margin:13px 0 0;max-width:330px}
+@media(max-width:900px){.what-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.what-grid{grid-template-columns:1fr}}
