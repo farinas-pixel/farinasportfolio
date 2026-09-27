@@ -1,5 +1,5 @@
 import React,{useEffect,useMemo,useState}from'react';
-import{ArrowDown,ArrowUpRight,BrainCircuit,Code2,Layers3,Mail,Menu,MessageCircle,MousePointer2,Sparkles,X,Zap,Award}from'lucide-react';
+import{ArrowDown,ArrowUp,ArrowUpRight,BrainCircuit,Code2,Layers3,Mail,Menu,MessageCircle,MousePointer2,Sparkles,X,Zap,Award}from'lucide-react';
 import{ChatbotPanel}from'./components/ChatbotPanel';
 
 const PHOTO='/assets/farinas-profile.jpg';
