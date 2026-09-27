@@ -3,9 +3,9 @@ import{Bot,CheckCircle2,Minus,RotateCcw,Send,Sparkles,User,X}from'lucide-react';
 type Msg={id:string;role:'user'|'model';text:string;time:string;error?:boolean};
 type Props={isOpen:boolean;onClose:()=>void};
 const prompts=['What projects has Farinas built?','What tools does she use?','Tell me about her AI work.','What is Vibe Coder?'];
-const visitorId=(()=>{const k='farinas-ai-visitor';const old=localStorage.getItem(k);if(old)return old;const id='visitor-'+crypto.randomUUID();localStorage.setItem(k,id);return id})();
 const time=()=>new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
 export const ChatbotPanel:React.FC<Props>=({isOpen,onClose})=>{
+ const[visitorId]=useState(()=>{try{const k='farinas-ai-visitor';const old=window.localStorage.getItem(k);if(old)return old;const uuid=typeof window.crypto?.randomUUID==='function'?window.crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36);const id='visitor-'+uuid;window.localStorage.setItem(k,id);return id}catch{return 'visitor-'+Date.now().toString(36)}});
  const[messages,setMessages]=useState<Msg[]>([{id:'welcome',role:'model',text:"Hi, I'm FARINAS AI. Ask me about Farinas Mumtaj H's projects, tools, AI work, UI/UX interests, ECE background, or Vibe Coder identity.",time:time()}]);
  const[input,setInput]=useState('');const[loading,setLoading]=useState(false);const[min,setMin]=useState(false);const[last,setLast]=useState<string|null>(null);
  const end=useRef<HTMLDivElement>(null);const inputRef=useRef<HTMLInputElement>(null);
